@@ -8,7 +8,10 @@
   justify-content: space-around;
   justify-items: center;
 
-  box-shadow: 0 4px 4px #00000044;
+  &-wrapper
+  {
+    box-shadow: 0 4px 4px #00000044;
+  }
 
   &-logo
   {
