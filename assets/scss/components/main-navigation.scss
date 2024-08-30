@@ -1,6 +1,6 @@
 .main-navigation
 {
-  padding: 10px;
+  padding: 10px 0;
 
   display: grid;
   grid-gap: 25px;
@@ -9,12 +9,36 @@
   justify-items: center;
 
   box-shadow: 0 4px 4px #00000044;
+
+  &-logo
+  {
+    grid-area: logo;
+  }
+
+  &-separator
+  {
+    width : 100%;
+    background-color : #aaaaaa;
+    display: none;
+    grid-area: sep-line;
+  }
+
+  &>.h-navbar--links
+  {
+    grid-area: links;
+  }
+
+  &>.h-navbar--icons
+  {
+    grid-area: icons;
+  }
+
+  grid-template-areas: "logo" "links" "icons";
 }
 
 .h-navbar
 {
   display: flex;
-  width: fit-content;
 
   &-item~&-item
   {
@@ -40,6 +64,25 @@
 
 @media screen and (min-width: 480px)
 {
+  .main-navigation
+  {
+    padding: 10px 0 25px;
+
+    grid-template-areas: "logo icons" "sep-line sep-line" "links links";
+    justify-content: space-between;
+    justify-items: stretch;
+
+    &-separator
+    {
+      display: block;
+    }
+
+    &>.h-navbar--links
+    {
+      justify-content: space-between;
+    }
+  }
+
   .h-navbar
   {
     &-icon
@@ -64,6 +107,24 @@
 
 @media screen and (min-width: 1000px)
 {
+  .main-navigation
+  {
+    padding: 10px 0;
+
+    grid-template-areas: "logo links icons";
+    align-items: center;
+
+    &-separator
+    {
+      display: none;
+    }
+
+    &>.h-navbar--links
+    {
+      justify-content: flex-start;
+    }
+  }
+
   .h-navbar
   {
     &-icon
