@@ -1,0 +1,37 @@
+.a-navbar
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+
+  &-item
+  {
+	&~&
+	{
+	  margin-top: 20px;
+	}
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 999px)
+{
+  .a-navbar
+  {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: center;
+
+	&-item
+	{
+	  &~&
+	  {
+		margin-top: 0;
+		margin-left: 20px;
+	  }
+	  padding: 0 0 20px;
+	}
+  }
+}
