@@ -1,0 +1,55 @@
+.about-me
+{
+  display: grid;
+  justify-items: center;
+  grid-template-areas: "title" "picture" "text-block";
+
+  &>.page-title
+  {
+	grid-area: title;
+  }
+
+  &-picture
+  {
+	grid-area: picture;
+  }
+
+  &>.text-block
+  {
+	margin-top: 25px;
+	grid-area: text-block;
+  }
+}
+
+@media screen and (min-width: 480px)
+{
+  .about-me > .text-block
+  {
+	margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1000px)
+{
+  .about-me
+  {
+	grid-template-areas: "picture title" "picture text-block";
+	grid-column-gap: 50px;
+
+	& > .page-title
+	{
+	  width : 100%;
+	  text-align: right;
+	}
+
+	& > .text-block
+	{
+	  margin-top: 0;
+	}
+
+	&-picture
+	{
+	  width: 430px;
+	}
+  }
+}
