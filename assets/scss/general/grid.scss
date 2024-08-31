@@ -4,12 +4,6 @@
   width : 100%;
 }
 
-.row
-{
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .page-block
 {
   padding-top: 50px;
@@ -20,13 +14,7 @@
 {
   .container
   {
-	width : 320px;
-  }
-
-  .row
-  {
-	padding-left: 10px;
-	padding-right: 10px;
+	width : 300px;
   }
 }
 
@@ -34,12 +22,7 @@
 {
   .container
   {
-	width : 480px;
-  }
-  .row
-  {
-	padding-left: 25px;
-	padding-right: 25px;
+	width : 430px;
   }
 }
 
@@ -47,12 +30,7 @@
 {
   .container
   {
-	width : 720px;
-  }
-  .row
-  {
-	padding-left: 50px;
-	padding-right: 50px;
+	width : 620px;
   }
 }
 
@@ -60,13 +38,7 @@
 {
   .container
   {
-	width : 1000px;
-  }
-
-  .page-block
-  {
-	padding-top: 100px;
-	padding-bottom: 100px;
+	width : 800px;
   }
 }
 
@@ -74,6 +46,6 @@
 {
   .container
   {
-	width : 1440px;
+	width : 1240px;
   }
 }
