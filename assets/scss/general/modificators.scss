@@ -2,3 +2,29 @@
 {
 	padding: 50px 0;
 }
+
+.background
+{
+  &--dark
+  {
+	background-color : #222222;
+  }
+
+  &--light
+  {
+	background-color: #ffffff;
+  }
+}
+
+.text
+{
+  &--light
+  {
+	color: #ffffff;
+  }
+
+  &--dark
+  {
+	color: #222222;
+  }
+}
