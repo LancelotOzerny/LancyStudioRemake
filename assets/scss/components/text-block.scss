@@ -6,6 +6,10 @@
   p
   {
     text-indent: 25px;
+    & ~ p
+    {
+      margin-top: 25px;
+    }
   }
 
   &--lightblue
