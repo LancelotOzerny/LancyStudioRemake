@@ -3,6 +3,7 @@
   display: grid;
   grid-template-areas: "nav" "services" "contacts";
   grid-gap: 50px;
+  align-items: start;
 
   &-contacts
   {
@@ -21,11 +22,20 @@
   {
 	display: grid;
 	justify-content: space-around;
+	align-items: start;
   }
 
   & .page-title
   {
 	text-transform: none;
+  }
+}
+
+@media screen and (max-width: 479px)
+{
+  .main-footer .page-title
+  {
+	padding-bottom: 25px;
   }
 }
 
@@ -35,6 +45,17 @@
   {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas : "contacts nav services";
-	justify-content: left;
+	justify-content: start;
+	text-align: left;
+
+	&>div
+	{
+	  justify-content: start;
+	}
+
+	& .a-navbar
+	{
+	  align-items: start;
+	}
   }
 }
