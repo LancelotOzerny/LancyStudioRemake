@@ -1,0 +1,40 @@
+.main-footer
+{
+  display: grid;
+  grid-template-areas: "nav" "services" "contacts";
+  grid-gap: 50px;
+
+  &-contacts
+  {
+	grid-area: contacts;
+  }
+  &-navigation
+  {
+	grid-area: nav;
+  }
+  &-services
+  {
+	grid-area: services;
+  }
+
+  &>div
+  {
+	display: grid;
+	justify-content: space-around;
+  }
+
+  & .page-title
+  {
+	text-transform: none;
+  }
+}
+
+@media screen and (min-width: 1000px)
+{
+  .main-footer
+  {
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas : "contacts nav services";
+	justify-content: left;
+  }
+}
