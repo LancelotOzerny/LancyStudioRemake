@@ -39,32 +39,6 @@
   grid-template-areas: "logo" "links" "icons";
 }
 
-.h-navbar
-{
-  display: flex;
-
-  &-item~&-item
-  {
-    margin-left: 5px;
-  }
-
-  &-icon
-  {
-    width: 36px;
-    height: 36px;
-  }
-}
-
-.h-navbar--links
-{
-  .h-navbar-item~.h-navbar-item
-  {
-    margin-left: 15px;
-  }
-}
-
-
-
 @media screen and (min-width: 480px)
 {
   .main-navigation
@@ -83,27 +57,6 @@
     &>.h-navbar--links
     {
       justify-content: space-between;
-    }
-  }
-
-  .h-navbar
-  {
-    &-icon
-    {
-      width: 40px;
-      height: 40px;
-    }
-  }
-}
-
-@media screen and (min-width: 720px)
-{
-  .h-navbar
-  {
-    &-icon
-    {
-      width: 44px;
-      height: 44px;
     }
   }
 }
@@ -125,23 +78,6 @@
     &>.h-navbar--links
     {
       justify-content: flex-start;
-    }
-  }
-
-  .h-navbar--links
-  {
-    .h-navbar-item~.h-navbar-item
-    {
-      margin-left: 25px;
-    }
-  }
-
-  .h-navbar
-  {
-    &-icon
-    {
-      width: 48px;
-      height: 48px;
     }
   }
 }
