@@ -1,0 +1,62 @@
+.project
+{
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  justify-items: center;
+  align-items: center;
+
+  aspect-ratio: 1 / 1;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #000000;
+
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+
+  &-title
+  {
+	font-size: 18px;
+	font-weight: 200;
+  }
+
+  &-icon
+  {
+	width: 75%;
+	aspect-ratio: 1 / 1;
+  }
+}
+
+@media screen and (min-width: 480px)
+{
+  .project
+  {
+	grid-template-rows: 75px 1fr;
+
+	&-title
+	{
+	  font-size: 20px;
+	}
+  }
+}
+
+@media screen and (min-width: 720px)
+{
+
+}
+
+@media screen and (min-width: 1000px)
+{
+  .project-title
+  {
+	font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1440px)
+{
+  .project-title
+  {
+	font-size: 24px;
+  }
+}
