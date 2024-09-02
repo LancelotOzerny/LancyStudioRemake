@@ -166,5 +166,18 @@
 			</div>
 		</div>
 	</div>
+
+	<script src="assets/scripts/carousel.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function(event) {
+			'use strict';
+
+			let htmlCarouselList = document.getElementsByClassName('carousel');
+			for (let item of htmlCarouselList)
+			{
+				new Carousel(item);
+			}
+		})
+	</script>
 </body>
 </html>
