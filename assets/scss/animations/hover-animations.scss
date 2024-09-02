@@ -1,0 +1,31 @@
+.anim
+{
+  transition: .1s;
+}
+
+.anim-hover
+{
+  &--scale-80:hover
+  {
+	transform: scale(.8, .8);
+  }
+
+  &--scale-90:hover
+  {
+	transform: scale(.9, .9);
+  }
+
+  &--text-blue-bordered:hover
+  {
+	$hoverColor: #588bc6;
+	transform: scale(.9);
+
+	color: #fff;
+	font-weight: 800;
+	text-shadow:  -2px -2px 1px $hoverColor, -1px -2px 1px $hoverColor, 0 -2px 1px $hoverColor, 1px -2px 1px $hoverColor, 2px -2px 1px $hoverColor,
+				  -2px -1px 1px $hoverColor, -1px 2px 1px $hoverColor, 0 2px 1px $hoverColor, 1px 2px 1px $hoverColor, 2px 2px 1px $hoverColor,
+				  -2px 0 1px $hoverColor, -1px 0 1px $hoverColor, 0 0 1px $hoverColor, 1px 0 1px $hoverColor, 2px 0 1px $hoverColor,
+				  -2px 1px 1px $hoverColor, -1px 1px 1px $hoverColor, 0 1px 1px $hoverColor, 1px 1px 1px $hoverColor, 2px 1px 1px $hoverColor,
+				  -2px 2px 1px $hoverColor, -1px 2px 1px $hoverColor, 0 2px 1px $hoverColor, 1px 2px 1px $hoverColor, 2px 2px 1px $hoverColor;
+  }
+}

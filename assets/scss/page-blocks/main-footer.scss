@@ -5,6 +5,11 @@
   grid-gap: 50px;
   align-items: start;
 
+  & .page-title
+  {
+	padding-bottom: 30px;
+  }
+
   &-contacts
   {
 	grid-area: contacts;
@@ -28,6 +33,15 @@
   & .page-title
   {
 	text-transform: none;
+  }
+
+  & a
+  {
+	color: #bed6e4;
+  }
+  & a:hover
+  {
+	color: #fff;
   }
 }
 
