@@ -7,6 +7,9 @@
 
 @import "fonts/inter";
 
+@import "animations/keyframes";
+@import "animations/hover-animations";
+
 @import "components/buttons";
 @import "components/a-navbar";
 @import "components/h-navbar";
@@ -14,7 +17,6 @@
 @import "components/project";
 @import "components/carousel";
 
-@import "animations/hover-animations";
 
 @import "page-blocks/main-navigation";
 @import "page-blocks/main-preview";

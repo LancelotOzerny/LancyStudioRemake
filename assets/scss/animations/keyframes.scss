@@ -1,0 +1,18 @@
+@keyframes blue_gradient
+{
+  0%
+  {
+	box-shadow: inset 0 0 20px #63beff;
+  }
+
+  50%
+  {
+	box-shadow: inset 0 0 15px #a163ff;
+  }
+
+
+  100%
+  {
+	box-shadow: inset 0 0 20px #63beff;
+  }
+}

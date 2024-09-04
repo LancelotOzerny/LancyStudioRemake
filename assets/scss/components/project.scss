@@ -15,6 +15,25 @@
   -moz-user-select: none;
   -webkit-user-select: none;
 
+  transition: .2s;
+  animation: none;
+
+  animation-name: blue_gradient;
+  animation-timing-function: linear;
+  animation-duration: 1.25s;
+  animation-play-state: paused;
+  animation-iteration-count: infinite;
+
+  &:hover
+  {
+	animation-play-state: running;
+  }
+
+  &:hover &-icon
+  {
+	transform: scale(.9, .9);
+  }
+
   &-title
   {
 	font-size: 18px;
@@ -25,6 +44,7 @@
   {
 	max-width: 75%;
 	max-height: 90%;
+	transition: 1.5s;
   }
 }
 
@@ -39,11 +59,6 @@
 	  font-size: 20px;
 	}
   }
-}
-
-@media screen and (min-width: 720px)
-{
-
 }
 
 @media screen and (min-width: 1000px)

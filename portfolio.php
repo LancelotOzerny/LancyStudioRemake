@@ -46,7 +46,7 @@ require_once 'header.php';
 
         <div class="portfolio">
             <a class="project" href="https://github.com/LancelotOzerny/LancyStudio.git" draggable="false">
-                <p class="project-title">Lancy Studio Old (Github)</p>
+                <p class="project-title">Lancy Studio Old</p>
                 <img src="assets/sprites/projects/logo-Icon.png" draggable="false" alt="Project Icon" class="project-icon">
             </a>
 
