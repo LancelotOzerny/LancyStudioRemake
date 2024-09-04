@@ -12,29 +12,29 @@ require_once 'header.php';
         <div class="carousel">
             <img class="carousel-left-arrow" src="assets/sprites/arrow.png" alt="left">
             <img class="carousel-right-arrow" src="assets/sprites/arrow.png" alt="left">
-            <div class="carousel-content">
-                <div class="carousel-items-wrapper">
-                    <a class="project" href="https://github.com/LancelotOzerny/LancyStudio.git" draggable="false">
-                        <p class="project-title">Lancy Studio Old (Github)</p>
-                        <img src="assets/sprites/projects/logo-Icon.png" draggable="false" alt="Project Icon" class="project-icon">
-                    </a>
+			<div class="carousel-content">
+				<div class="carousel-items-wrapper">
+					<a class="project" href="https://github.com/LancelotOzerny/LancyStudio.git" draggable="false">
+						<p class="project-title">WEB: Lancy Studio Old</p>
+						<img src="assets/sprites/projects/logo-Icon.png" draggable="false" alt="Project Icon" class="project-icon">
+					</a>
 
-                    <a class="project" href="https://github.com/LancelotOzerny/LimitedFigure.git" draggable="false">
-                        <p class="project-title">Pixel Limited Figure (GitHub)</p>
-                        <img src="assets/sprites/projects/limited-figure-old.png" draggable="false" alt="Project Icon" class="project-icon">
-                    </a>
+					<a class="project" href="https://github.com/LancelotOzerny/LimitedFigure.git" draggable="false">
+						<p class="project-title">Unity: Pixel Limited Figure</p>
+						<img src="assets/sprites/projects/limited-figure-old.png" draggable="false" alt="Project Icon" class="project-icon">
+					</a>
 
-                    <a class="project" href="https://github.com/LancelotOzerny/New-Game-Developer-Toolkit.git" draggable="false">
-                        <p class="project-title">Unity Developer Toolkit</p>
-                        <img src="assets/sprites/projects/udt.png" draggable="false" alt="Project Icon" class="project-icon">
-                    </a>
+					<a class="project" href="https://github.com/LancelotOzerny/New-Game-Developer-Toolkit.git" draggable="false">
+						<p class="project-title">Unity: Unity Developer Toolkit</p>
+						<img src="assets/sprites/projects/udt.png" draggable="false" alt="Project Icon" class="project-icon">
+					</a>
 
-                    <a class="project" href="#project" draggable="false">
-                        <p class="project-title">Limited Figure</p>
-                        <img src="assets/sprites/projects/limited-figure.png" draggable="false" alt="Project Icon" class="project-icon">
-                    </a>
-                </div>
-            </div>
+					<a class="project" href="#project" draggable="false">
+						<p class="project-title">Unity: Limited Figure</p>
+						<img src="assets/sprites/projects/limited-figure.png" draggable="false" alt="Project Icon" class="project-icon">
+					</a>
+				</div>
+			</div>
         </div>
     </div>
 </div>
@@ -46,37 +46,37 @@ require_once 'header.php';
 
         <div class="portfolio">
             <a class="project" href="https://github.com/LancelotOzerny/LancyStudio.git" draggable="false">
-                <p class="project-title">Lancy Studio Old</p>
+                <p class="project-title">WEB: Lancy Studio Old</p>
                 <img src="assets/sprites/projects/logo-Icon.png" draggable="false" alt="Project Icon" class="project-icon">
             </a>
 
             <a class="project" href="https://github.com/LancelotOzerny/LimitedFigure.git" draggable="false">
-                <p class="project-title">Pixel Limited Figure (GitHub)</p>
+                <p class="project-title">Unity: Pixel Limited Figure</p>
                 <img src="assets/sprites/projects/limited-figure-old.png" draggable="false" alt="Project Icon" class="project-icon">
             </a>
 
             <a class="project" href="https://github.com/LancelotOzerny/AJAX_CRUD_REVIEWS.git" draggable="false">
-                <p class="project-title">Ajax Crud Отзывов</p>
+                <p class="project-title">WEB: Ajax Crud Отзывов</p>
                 <img src="assets/sprites/projects/reviews.png" draggable="false" alt="Project Icon" class="project-icon">
             </a>
 
             <a class="project" href="https://github.com/LancelotOzerny/PHP_User-Crud.git" draggable="false">
-                <p class="project-title">PHP Crud пользователей</p>
+                <p class="project-title">WEB: PHP Crud пользователей</p>
                 <img src="assets/sprites/projects/users.png" draggable="false" alt="Project Icon" class="project-icon">
             </a>
 
             <a class="project" href="https://github.com/LancelotOzerny/Fullstack_Exercise.git" draggable="false">
-                <p class="project-title">Задание FullStack CodeIgniter</p>
+                <p class="project-title">WEB: Задание FullStack CodeIgniter</p>
                 <img src="assets/sprites/projects/codeigniter.png" draggable="false" alt="Project Icon" class="project-icon">
             </a>
 
             <a class="project" href="https://github.com/LancelotOzerny/New-Game-Developer-Toolkit.git" draggable="false">
-                <p class="project-title">Unity Developer Toolkit</p>
+                <p class="project-title">Unity: Unity Developer Toolkit</p>
                 <img src="assets/sprites/projects/udt.png" draggable="false" alt="Project Icon" class="project-icon">
             </a>
 
             <a class="project" href="#project" draggable="false">
-                <p class="project-title">Limited Figure</p>
+                <p class="project-title">Unity: Limited Figure</p>
                 <img src="assets/sprites/projects/limited-figure.png" draggable="false" alt="Project Icon" class="project-icon">
             </a>
         </div>

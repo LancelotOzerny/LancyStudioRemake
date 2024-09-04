@@ -51,33 +51,33 @@ require_once 'header.php';
         <div class="page-title">Лучшие проекты</div>
     </div>
 
-    <div class="carousel">
-        <img class="carousel-left-arrow" src="assets/sprites/arrow.png" alt="left">
-        <img class="carousel-right-arrow" src="assets/sprites/arrow.png" alt="left">
-        <div class="carousel-content">
-            <div class="carousel-items-wrapper">
-                <a class="project" href="https://github.com/LancelotOzerny/LancyStudio.git" draggable="false">
-                    <p class="project-title">Lancy Studio Old (Github)</p>
-                    <img src="assets/sprites/projects/logo-Icon.png" draggable="false" alt="Project Icon" class="project-icon">
-                </a>
+	<div class="carousel">
+		<img class="carousel-left-arrow" src="assets/sprites/arrow.png" alt="left">
+		<img class="carousel-right-arrow" src="assets/sprites/arrow.png" alt="left">
+		<div class="carousel-content">
+			<div class="carousel-items-wrapper">
+				<a class="project" href="https://github.com/LancelotOzerny/LancyStudio.git" draggable="false">
+					<p class="project-title">WEB: Lancy Studio Old</p>
+					<img src="assets/sprites/projects/logo-Icon.png" draggable="false" alt="Project Icon" class="project-icon">
+				</a>
 
-                <a class="project" href="https://github.com/LancelotOzerny/LimitedFigure.git" draggable="false">
-                    <p class="project-title">Pixel Limited Figure (GitHub)</p>
-                    <img src="assets/sprites/projects/limited-figure-old.png" draggable="false" alt="Project Icon" class="project-icon">
-                </a>
+				<a class="project" href="https://github.com/LancelotOzerny/LimitedFigure.git" draggable="false">
+					<p class="project-title">Unity: Pixel Limited Figure</p>
+					<img src="assets/sprites/projects/limited-figure-old.png" draggable="false" alt="Project Icon" class="project-icon">
+				</a>
 
-                <a class="project" href="https://github.com/LancelotOzerny/New-Game-Developer-Toolkit.git" draggable="false">
-                    <p class="project-title">Unity Developer Toolkit</p>
-                    <img src="assets/sprites/projects/udt.png" draggable="false" alt="Project Icon" class="project-icon">
-                </a>
+				<a class="project" href="https://github.com/LancelotOzerny/New-Game-Developer-Toolkit.git" draggable="false">
+					<p class="project-title">Unity: Unity Developer Toolkit</p>
+					<img src="assets/sprites/projects/udt.png" draggable="false" alt="Project Icon" class="project-icon">
+				</a>
 
-                <a class="project" href="#project" draggable="false">
-                    <p class="project-title">Limited Figure</p>
-                    <img src="assets/sprites/projects/limited-figure.png" draggable="false" alt="Project Icon" class="project-icon">
-                </a>
-            </div>
-        </div>
-    </div>
+				<a class="project" href="#project" draggable="false">
+					<p class="project-title">Unity: Limited Figure</p>
+					<img src="assets/sprites/projects/limited-figure.png" draggable="false" alt="Project Icon" class="project-icon">
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
 
 <?php
