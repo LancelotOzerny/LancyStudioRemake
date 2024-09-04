@@ -16,7 +16,15 @@ class Carousel
         this.base.querySelector('.carousel-right-arrow').addEventListener('click', this.right.bind(this));
 
         this.setParams();
-        window.addEventListener('resize', this.setParams.bind(this))
+
+        window.addEventListener('resize', function ()
+        {
+            clearTimeout(this.restartTimeout);
+
+            this.restartTimeout = setTimeout(() => {
+                this.setParams();
+            }, 100);
+        }.bind(this))
     }
 
     setParams()
