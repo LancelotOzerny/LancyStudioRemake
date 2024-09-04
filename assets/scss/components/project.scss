@@ -18,15 +18,9 @@
   transition: .2s;
   animation: none;
 
-  animation-name: blue_gradient;
-  animation-timing-function: linear;
-  animation-duration: 1.25s;
-  animation-play-state: paused;
-  animation-iteration-count: infinite;
-
   &:hover
   {
-	animation-play-state: running;
+	animation: blue_gradient 1.5s infinite linear;
   }
 
   &:hover &-icon
