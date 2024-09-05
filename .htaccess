@@ -1,15 +1,11 @@
 Options -Indexes
-ErrorDocument 404 /404.php
+ErrorDocument 404 /app/bootstrap.php
 
 <IfModule mod_rewrite.c>
   Options +FollowSymLinks
   RewriteEngine On
 
-  RewriteCond %{REQUEST_FILENAME} !/app/bootstrap.php$
-  RewriteRule ^(.*)$ /app/bootstrap.php [L]
-  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
-</IfModule>
-
-<IfModule mod_dir.c>
-  DirectoryIndex index.php index.html
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteCond %{REQUEST_FILENAME} !/app/bootstrap.php
+  RewriteRule ^(.*)$ /app/bootstrap.php [L,QSA]
 </IfModule>
