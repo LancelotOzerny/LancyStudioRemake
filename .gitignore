@@ -1,4 +1,6 @@
 .idea/
+vendor/
+src/
 
 *.css
 *.css.map
