@@ -5,8 +5,8 @@ ErrorDocument 404 /404.php
   Options +FollowSymLinks
   RewriteEngine On
 
-  RewriteCond %{REQUEST_FILENAME} !/core/bootstrap.php$
-  RewriteRule ^(.*)$ /core/bootstrap.php [L]
+  RewriteCond %{REQUEST_FILENAME} !/app/bootstrap.php$
+  RewriteRule ^(.*)$ /app/bootstrap.php [L]
   RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 </IfModule>
 
