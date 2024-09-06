@@ -8,18 +8,19 @@ class Template
     use Singleton;
 
     private string $template = 'default';
+    public string $templatePath;
 
     public function load(string $uri) : void
     {
-
+        $this->template = 'default';
+        $this->templatePath = "/develop/templates/$this->template";
     }
 
     public function includeHeader() : void
     {
-        $path = $_SERVER['DOCUMENT_ROOT'] . "/develop/templates/$this->template/header.php";
-        if (file_exists($path))
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/$this->templatePath/header.php"))
         {
-            include_once $path;
+            include_once $_SERVER['DOCUMENT_ROOT'] . "/$this->templatePath/header.php";
         }
         else
         {
@@ -29,10 +30,10 @@ class Template
 
     public function includeFooter() : void
     {
-        $path = $_SERVER['DOCUMENT_ROOT'] . "/develop/templates/$this->template/footer.php";
-        if (file_exists($path))
+        $templatePath = $this->path;
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/$this->templatePath/footer.php"))
         {
-            include_once $path;
+            include_once $_SERVER['DOCUMENT_ROOT'] . "/$this->templatePath/footer.php";
         }
         else
         {
