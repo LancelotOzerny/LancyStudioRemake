@@ -1,5 +1,5 @@
 <?php
-namespace Modules\System\Traits;
+namespace App\Modules\System\Traits;
 
 trait Singleton
 {

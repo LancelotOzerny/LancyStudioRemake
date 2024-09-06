@@ -1,7 +1,7 @@
 <?php
-namespace Modules\System\Classes;
+namespace App\Modules\System\Classes;
 
-use Modules\System\Traits\Singleton;
+use App\Modules\System\Traits\Singleton;
 
 class Application
 {
