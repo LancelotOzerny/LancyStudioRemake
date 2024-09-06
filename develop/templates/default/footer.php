@@ -8,19 +8,19 @@
 				<ul class="h-navbar h-navbar--icons">
 					<li class="h-navbar-item anim anim-hover--scale-80">
 						<a class="h-navbar-link" href="https://t.me//lalalancy/">
-							<img class="h-navbar-icon" src="/assets/sprites/telegram-icon.png" alt="TG">
+							<img class="h-navbar-icon" src="<?= $this->templatePath ?>/assets/sprites/telegram-icon.png" alt="TG">
 						</a>
 					</li>
 
 					<li class="h-navbar-item anim anim-hover--scale-80">
 						<a class="h-navbar-link" href="https://vk.com/lancy_studio">
-							<img class="h-navbar-icon" src="/assets/sprites/vk-icon.png" alt="VK">
+							<img class="h-navbar-icon" src="<?= $this->templatePath ?>/assets/sprites/vk-icon.png" alt="VK">
 						</a>
 					</li>
 
 					<li class="h-navbar-item anim anim-hover--scale-80">
 						<a class="h-navbar-link" href="https://github.com/LancelotOzerny">
-							<img class="h-navbar-icon" src="/assets/sprites/github-icon.png" alt="GITHUB">
+							<img class="h-navbar-icon" src="<?= $this->templatePath ?>/assets/sprites/github-icon.png" alt="GITHUB">
 						</a>
 					</li>
 				</ul>
