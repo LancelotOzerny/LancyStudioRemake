@@ -1,2 +1,4 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/footer.php';
+use App\Modules\System\Classes\Template;
+
+Template::Instance()->includeFooter();
