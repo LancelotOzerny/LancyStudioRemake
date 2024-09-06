@@ -1,6 +1,6 @@
 <?php
-require_once '../vendor/autoload.php';
+require_once 'modules/system/classes/autoload.php';
 
-use Modules\System\Classes\Application;
+use App\Modules\System\Classes\Application;
 
 Application::Instance()->init();
