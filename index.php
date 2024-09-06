@@ -1,5 +1,5 @@
 <?php
-require_once 'header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/app/header.php';
 ?>
 
 <!-- LABEL:HTML PAGE BANNER -->
@@ -7,7 +7,7 @@ require_once 'header.php';
     <div class="container">
         <div class="page-block main-preview">
             <p class="main-preview-title">Максим Александрович Беляков</p>
-            <img class="main-preview-logo" src="assets/sprites/logo-Icon.png" alt="Lancy Logo">
+            <img class="main-preview-logo" src="/assets/sprites/logo-Icon.png" alt="Lancy Logo">
             <div class="page-title">WEB-программист, Unity разработчик</div>
         </div>
     </div>
@@ -17,7 +17,7 @@ require_once 'header.php';
 <div class="container">
     <div class="page-block about-me">
         <div class="page-title">Обо мне в двух словах</div>
-        <img class="about-me-picture" src="assets/sprites/goblin-art.png" alt="goblin picture">
+        <img class="about-me-picture" src="/assets/sprites/goblin-art.png" alt="goblin picture">
 
         <div class="text-block">
             <p>
@@ -52,28 +52,28 @@ require_once 'header.php';
     </div>
 
 	<div class="carousel">
-		<img class="carousel-left-arrow" src="assets/sprites/arrow.png" alt="left">
-		<img class="carousel-right-arrow" src="assets/sprites/arrow.png" alt="left">
+		<img class="carousel-left-arrow" src="/assets/sprites/arrow.png" alt="left">
+		<img class="carousel-right-arrow" src="/assets/sprites/arrow.png" alt="left">
 		<div class="carousel-content">
 			<div class="carousel-items-wrapper">
 				<a class="project" href="https://github.com/LancelotOzerny/LancyStudio.git" draggable="false">
 					<p class="project-title">WEB: Lancy Studio Old</p>
-					<img src="assets/sprites/projects/logo-Icon.png" draggable="false" alt="Project Icon" class="project-icon">
+					<img src="/assets/sprites/projects/logo-Icon.png" draggable="false" alt="Project Icon" class="project-icon">
 				</a>
 
 				<a class="project" href="https://github.com/LancelotOzerny/LimitedFigure.git" draggable="false">
 					<p class="project-title">Unity: Pixel Limited Figure</p>
-					<img src="assets/sprites/projects/limited-figure-old.png" draggable="false" alt="Project Icon" class="project-icon">
+					<img src="/assets/sprites/projects/limited-figure-old.png" draggable="false" alt="Project Icon" class="project-icon">
 				</a>
 
 				<a class="project" href="https://github.com/LancelotOzerny/New-Game-Developer-Toolkit.git" draggable="false">
 					<p class="project-title">Unity: Unity Developer Toolkit</p>
-					<img src="assets/sprites/projects/udt.png" draggable="false" alt="Project Icon" class="project-icon">
+					<img src="/assets/sprites/projects/udt.png" draggable="false" alt="Project Icon" class="project-icon">
 				</a>
 
 				<a class="project" href="#project" draggable="false">
 					<p class="project-title">Unity: Limited Figure</p>
-					<img src="assets/sprites/projects/limited-figure.png" draggable="false" alt="Project Icon" class="project-icon">
+					<img src="/assets/sprites/projects/limited-figure.png" draggable="false" alt="Project Icon" class="project-icon">
 				</a>
 			</div>
 		</div>
@@ -81,5 +81,5 @@ require_once 'header.php';
 </div>
 
 <?php
-    require_once 'footer.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/app/footer.php';
 ?>
