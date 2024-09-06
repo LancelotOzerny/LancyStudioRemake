@@ -31,15 +31,10 @@
 
 				<ul class="a-navbar">
 					<li class="a-navbar-item">
-						<a class="a-navbar-link" href="index.php">Главная</a>
+						<a class="a-navbar-link" href="/">Главная</a>
 					</li>
-					<!--
-                                        <li class="h-navbar-item anim anim-hover--text-blue-bordered">
-                                            <a class="h-navbar-link" href="certificates.html">Сертификаты</a>
-                                        </li>
-                    -->
 					<li class="a-navbar-item">
-						<a class="a-navbar-link" href="portfolio.php">Портфолио</a>
+						<a class="a-navbar-link" href="/portfolio/">Портфолио</a>
 					</li>
 				</ul>
 			</div>

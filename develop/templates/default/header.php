@@ -21,15 +21,11 @@
 
             <ul class="h-navbar h-navbar--links">
                 <li class="h-navbar-item anim anim-hover--text-blue-bordered">
-                    <a class="h-navbar-link" href="index.php">Главная</a>
+                    <a class="h-navbar-link" href="/">Главная</a>
                 </li>
-                <!--
-					<li class="h-navbar-item anim anim-hover--text-blue-bordered">
-						<a class="h-navbar-link" href="certificates.html">Сертификаты</a>
-					</li>
-                -->
+
                 <li class="h-navbar-item anim anim-hover--text-blue-bordered">
-                    <a class="h-navbar-link" href="/portfolio.php">Портфолио</a>
+                    <a class="h-navbar-link" href="/portfolio/">Портфолио</a>
                 </li>
             </ul>
 
