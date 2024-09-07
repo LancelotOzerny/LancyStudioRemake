@@ -4,3 +4,5 @@ src/
 
 *.css
 *.css.map
+
+test.php
