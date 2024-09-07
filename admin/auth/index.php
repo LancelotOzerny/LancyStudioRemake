@@ -6,6 +6,11 @@ use Develop\Classes\Database\Tables\UsersTable;
 
 /** @var string $templatePath */
 
+if (isset($_SESSION['login-user']))
+{
+	header('Location:/admin/');
+}
+
 if (Application::Instance()->request->post->has('userLogin'))
 {
     $resultData = [];
@@ -40,6 +45,7 @@ if (Application::Instance()->request->post->has('userLogin'))
 
 	if (empty($resultData['errors']))
     {
+		$_SESSION['login-user'] = $currentUserLogin;
         $resultData['success'][] = 'Авторизация прошла успешно!';
 	}
 
