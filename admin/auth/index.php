@@ -2,24 +2,48 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/header.php';
 
 use App\Modules\System\Classes\Application;
+use Develop\Classes\Database\Tables\UsersTable;
 
 /** @var string $templatePath */
 
 if (Application::Instance()->request->post->has('userLogin'))
 {
-	$data = [];
+    $resultData = [];
+    $resultData['errors'] = [];
+    $resultData['success'] = [];
 
-	$name = Application::Instance()->request->post->get('userLogin');
-	$pass = Application::Instance()->request->post->get('userPass');
+    $currentUserLogin = Application::Instance()->request->post->get('userLogin');
+    $currentUserPassword = Application::Instance()->request->post->get('userPass');
 
-	$name = trim(htmlspecialchars($name));
-	$pass = trim(htmlspecialchars($pass));
+    $currentUserLogin = trim(htmlspecialchars($currentUserLogin));
+    $currentUserPassword = trim(htmlspecialchars($currentUserPassword));
 
-	$hashPass = password_hash($pass, PASSWORD_DEFAULT);
+	$selectedUserList = UsersTable::select([
+		'select' => ['id', 'login', 'password'],
+		'where' => [
+			'login' => $currentUserLogin,
+		]
+	]);
 
-	// Обработка данных
+	if (empty($selectedUserList))
+    {
+        $resultData['errors'][] = 'Пользователь не найден!';
+	}
+	else
+    {
+        $currentPassVerify = password_verify($currentUserPassword, $selectedUserList[0]['password']);
+		if ($currentPassVerify === false)
+        {
+            $resultData['errors'][] = 'Неверный пароль!';
+		}
+	}
 
-	die(json_encode($data));
+	if (empty($resultData['errors']))
+    {
+        $resultData['success'][] = 'Авторизация прошла успешно!';
+	}
+
+	die(json_encode($resultData));
 }
 
 \App\Modules\System\Classes\Template::Instance()->includeHeader();
@@ -40,6 +64,8 @@ if (Application::Instance()->request->post->has('userLogin'))
 					<input class="form-input" name="user-pass" type="password" id="inputPassword" value="test" placeholder="Пароль">
 				</div>
 
+				<small class="error-messages" style="margin-top: 10px; font-weight: 700; color: #c42626; font-size: 13px"></small>
+
 				<div class="display-grid grid-justify--around">
 					<input id="sendButton" class="form-input form-input--rounded form-send" type="submit" value="Войти">
 				</div>
@@ -56,6 +82,7 @@ if (Application::Instance()->request->post->has('userLogin'))
                 e.preventDefault();
 
                 let form = $(this);
+                let errorMessagesBox = form.find('.error-messages');
 
                 $.ajax({
 					type: 'post',
@@ -66,7 +93,20 @@ if (Application::Instance()->request->post->has('userLogin'))
 					},
 					success: function(data)
 					{
-                        console.info(data)
+                        let resultData = JSON.parse(data);
+
+                        errorMessagesBox.html('');
+                        if (resultData.errors.length > 0)
+                        {
+                            for (let i = 0; i < resultData.errors.length; ++i)
+                            {
+                                errorMessagesBox.append($('<p>', {text: resultData.errors[i]}));
+							}
+						}
+                        else
+                        {
+                            window.location.replace('/admin/');
+						}
 					}
 				});
 			});
