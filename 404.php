@@ -1,4 +1,9 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/app/header.php'; ?>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/app/header.php';
+/** @var string $templatePath */
+
+\App\Modules\System\Classes\Template::Instance()->includeHeader();
+?>
 
 <div class="container" style="min-height: 40vh">
 	<div class="page-block">
@@ -11,4 +16,6 @@
 	</div>
 </div>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/app/footer.php'; ?>
+<?php
+\App\Modules\System\Classes\Template::Instance()->includeFooter();
+?>

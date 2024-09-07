@@ -1,7 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/header.php';
-
 /** @var string $templatePath */
+
+\App\Modules\System\Classes\Template::Instance()->includeHeader();
 ?>
 
 <!-- LABEL:HTML BEST PROJECTS -->

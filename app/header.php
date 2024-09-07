@@ -9,7 +9,6 @@ try
     Application::Instance()->init();
 
     Template::Instance()->load(Application::Instance()->getUri());
-    Template::Instance()->includeHeader();
     $templatePath = Template::Instance()->templatePath;
 }
 catch (Throwable $error)

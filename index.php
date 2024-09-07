@@ -1,7 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/header.php';
-
 /** @var string $templatePath */
+
+\App\Modules\System\Classes\Template::Instance()->includeHeader();
 ?>
 
 <!-- LABEL:HTML PAGE BANNER -->
@@ -83,5 +84,5 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/app/header.php';
 </div>
 
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/app/footer.php';
+\App\Modules\System\Classes\Template::Instance()->includeFooter();
 ?>
