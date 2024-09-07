@@ -4,20 +4,21 @@ namespace App\Modules\Database\Classes;
 abstract class Table
 {
     protected static string $tableName = '';
+    public static function getTableName(): string
+    {
+        return static::$tableName;
+    }
 
     public static function select(array $params = []) : array
     {
         $resultData = [];
-
+        $bindParams = [];
         $selectParams = $params['select'] ?? [];
         $whereParams = $params['where'] ?? [];
 
         $select = empty($selectParams) ? 'select *' : 'select ' . join(', ', $selectParams);
 
-        $wherePrepared = [
-            'params' => [],
-            'sql' => '',
-        ];
+        $wherePreparedParams = [];
         if (empty($whereParams) === false)
         {
             foreach ($whereParams as $key => $condition)
@@ -27,22 +28,30 @@ abstract class Table
                 $operator = $isArray ? $condition[0] : '=';
                 $value = $isArray ? $condition[1] : $condition;
 
-                $wherePrepared['params'][":$key"] = $value;
-                $wherePrepared['sql'] .= "$key $operator :$key";
+                $bindParams[":$key"] = $value;
+                $wherePreparedParams[] = "$key $operator :$key";
             }
         }
-        $where = empty($whereParams) ? '' : 'WHERE ' . $wherePrepared['sql'];
+        $where = empty($wherePreparedParams) ? '' : 'WHERE ' . join(' AND ', $wherePreparedParams);
 
-        $sql = "$select FROM " . static::$tableName . " $where;";
-        $prepare = DataBase::getConnection()->prepare($sql);
-
-        echo '<pre>';
-        print_r($sql);
-        echo '</pre>';
-
-        if (empty($where) === false)
+        $join = '';
+        if (empty($params['join']) === false)
         {
-            foreach ($wherePrepared['params'] as $param => $value)
+            $tableName = $params['join']['table']::getTableName();
+            foreach ($params['join']['on'] as $key => $value)
+            {
+                $left = $key;
+                $operand = $value[0] ?? '=';
+                $right = $value[1] ?? $value;
+                $join = ($params['join']['type'] ?? 'INNER') . " JOIN $tableName ON $left $operand $tableName.$right" ;
+            }
+        }
+
+        $sql = "$select FROM " . static::$tableName . " $join $where;";
+        $prepare = DataBase::getConnection()->prepare($sql);
+        if (empty($bindParams) === false)
+        {
+            foreach ($bindParams as $param => $value)
             {
                 $prepare->bindParam($param, $value);
             }
