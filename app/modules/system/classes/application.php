@@ -2,6 +2,7 @@
 namespace App\Modules\System\Classes;
 
 use App\Modules\System\Traits\Singleton;
+use App\Modules\System\Classes\Request;
 
 class Application
 {
@@ -9,6 +10,7 @@ class Application
 
     private string $current_uri = '';
     private array $params = [];
+    public Request | null $request = null;
 
     public function init() : void
     {
@@ -19,6 +21,8 @@ class Application
         {
             $this->setParams($arr[1]);
         }
+
+        $this->request = new Request();
     }
 
     private function setParams(string $params) : void
