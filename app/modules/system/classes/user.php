@@ -6,7 +6,7 @@ use Develop\Classes\Database\Tables\UsersTable;
 class User
 {
     private string $login = '';
-    private string $rightsLevel = '';
+    private int $rightsLevel = 0;
 
     public function getLogin(): string
     {

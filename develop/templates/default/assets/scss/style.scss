@@ -1,11 +1,11 @@
-@import "general/reset";
+@import "../../../general/assets/scss/general/reset";
 
 @import "general/varriables";
 @import "general/modificators";
-@import "general/text";
+@import "../../../general/assets/scss/general/text";
 @import "general/grid";
 
-@import "fonts/inter";
+@import "../../../general/assets/scss/fonts/inter";
 
 @import "animations/keyframes";
 @import "animations/hover-animations";
@@ -17,7 +17,7 @@
 @import "components/project";
 @import "components/carousel";
 
-@import "forms/form";
+@import "../../../general/assets/scss/forms/form";
 
 @import "page-blocks/main-navigation";
 @import "page-blocks/main-preview";

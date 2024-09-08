@@ -2,6 +2,7 @@
 namespace App\Modules\System\Classes;
 
 use App\Modules\System\Traits\Singleton;
+use Develop\Classes\Database\Tables\RoutesTable;
 
 class Template
 {
@@ -10,9 +11,9 @@ class Template
     private string $template = 'default';
     public string $templatePath;
 
-    public function load(string $uri) : void
+    public function load(string $template = 'default') : void
     {
-        $this->template = 'default';
+        $this->template = $template;
         $this->templatePath = "/develop/templates/$this->template";
     }
 
