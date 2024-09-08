@@ -48,7 +48,13 @@ abstract class Table
             }
         }
 
-        $sql = "$select FROM " . static::$tableName . " $join $where;";
+        $sql = "$select FROM " . static::$tableName . " $join $where";
+        if ($params['order'])
+        {
+            $order = 'ORDER BY `' . $params['order']['by'] . '` ' . $params['order']['direction'] ?? 'ASC';
+            $sql .= $order;
+        }
+
         $prepare = DataBase::getConnection()->prepare($sql);
         if (empty($bindParams) === false)
         {
