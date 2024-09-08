@@ -52,7 +52,6 @@
 	</div>
 </div>
 
-<script async src="<?= $this->templatePath ?>/assets/scripts/jquery-3.7.1.min.js" onload="document.dispatchEvent(new Event('jqueryLoaded'))"></script>
 <script src="<?= $this->templatePath ?>/assets/scripts/carousel.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function(event) {
