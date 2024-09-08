@@ -8,7 +8,7 @@ use Develop\Classes\Database\Tables\UsersTable;
 
 if (isset($_SESSION['login-user']))
 {
-	header('Location:/admin/');
+    header('Location:/admin/');
 }
 
 if (Application::Instance()->request->post->has('userLogin'))

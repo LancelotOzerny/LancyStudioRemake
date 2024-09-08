@@ -12,21 +12,30 @@ try
     // ----------------------------------------------------------------------
     // ------------------- ШАБЛОН И ПРАВА ДОСТУПА ---------------------------
     // ----------------------------------------------------------------------
-    $routeInfo = \Develop\Classes\Database\Tables\RoutesTable::select([
+    $routesList = \Develop\Classes\Database\Tables\RoutesTable::select([
         'select' => [ 'route', 'template', 'rights_level'],
-        'where' => [
-            'route' => Application::Instance()->getUri()
+        'order' => [
+            'by' => 'sort',
+            'direction' => 'desc',
         ]
-    ])[0] ?? null;
+    ]);
 
     $templateName = 'default';
-    if ($routeInfo)
+    $rightsLevel = 0;
+    $uri = Application::Instance()->getUri();
+    foreach ($routesList as $route)
     {
-        $templateName = $routeInfo['template'];
-        if (Application::Instance()->currentUser->getRightsLevel() < $routeInfo['rights_level'])
+        if ($uri === $route['route'] || str_starts_with($uri, $route['route']))
         {
-            header('Location:/admin/auth/');
+            $templateName = $route['template'];
+            $rightsLevel = $route['rights_level'];
+            break;
         }
+    }
+
+    if (Application::Instance()->currentUser->getRightsLevel() < $rightsLevel)
+    {
+        header('Location:/admin/auth/');
     }
     Template::Instance()->load($templateName);
     $templatePath = Template::Instance()->templatePath;

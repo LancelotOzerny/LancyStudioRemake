@@ -18,14 +18,14 @@
 	<div class="side-navigation-content">
 		<ul class="side-navigation-navbar">
 			<span class="side-navigation-navbar-title">Настройки сайта</span>
-			<li class="side-navigation-item"><a class="side-navigation-link" href="#">Маршруты</a></li>
-			<li class="side-navigation-item"><a class="side-navigation-link" href="#">Пользователи</a></li>
-			<li class="side-navigation-item"><a class="side-navigation-link" href="#">Права доступа</a></li>
+			<li class="side-navigation-item"><a class="side-navigation-link" href="/admin/settings/routes/">Маршруты</a></li>
+			<li class="side-navigation-item"><a class="side-navigation-link" href="/admin/settings/users/">Пользователи</a></li>
+			<li class="side-navigation-item"><a class="side-navigation-link" href="/admin/settings/rights/">Права доступа</a></li>
 		</ul>
 
 		<ul class="side-navigation-navbar">
 			<span class="side-navigation-navbar-title">Управление контентом</span>
-			<li class="side-navigation-item"><a class="side-navigation-link" href="#">Портфолио</a></li>
+			<li class="side-navigation-item"><a class="side-navigation-link" href="/admin/content/portfolio/">Портфолио</a></li>
 		</ul>
 	</div>
 	<div class="side-navigation-toggle-area">

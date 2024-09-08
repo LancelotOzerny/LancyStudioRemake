@@ -11,9 +11,9 @@ class Template
     private string $template = 'default';
     public string $templatePath;
 
-    public function load(string $template = 'default') : void
+    public function load(string $templateName = 'default') : void
     {
-        $this->template = $template;
+        $this->template = $templateName;
         $this->templatePath = "/develop/templates/$this->template";
     }
 
