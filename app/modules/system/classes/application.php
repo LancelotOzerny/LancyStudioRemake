@@ -12,6 +12,8 @@ class Application
     private array $params = [];
     public Request | null $request = null;
 
+    public User | null $currentUser = null;
+
     public function init() : void
     {
         $arr = explode('?', $_SERVER['REQUEST_URI']);
@@ -23,6 +25,12 @@ class Application
         }
 
         $this->request = new Request();
+
+        $this->currentUser = new \App\Modules\System\Classes\User();
+        if ($this->request->session->has('login-user'))
+        {
+            $this->currentUser->loadByLogin($this->request->session->get('login-user'));
+        }
     }
 
     private function setParams(string $params) : void
