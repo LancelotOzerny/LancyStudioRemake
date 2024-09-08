@@ -54,30 +54,25 @@ if (Application::Instance()->request->post->has('userLogin'))
 
 \App\Modules\System\Classes\Template::Instance()->includeHeader();
 ?>
-<div class="container">
-    <div class="page-block">
-        <div class="page-title" style="text-align: center; display: block">Авторизация</div>
-
-        <div class="display-grid grid-justify--around">
-			<form id="AuthForm" class="form form--bordered">
-				<div class="form-block">
-					<label for="inputLogin">Логин</label>
-					<input class="form-input" name="user-name" type="text" id="inputLogin" placeholder="Логин">
-				</div>
-
-				<div class="form-block">
-					<label for="inputPassword">Пароль</label>
-					<input class="form-input" name="user-pass" type="password" id="inputPassword" value="test" placeholder="Пароль">
-				</div>
-
-				<small class="error-messages" style="margin-top: 10px; font-weight: 700; color: #c42626; font-size: 13px"></small>
-
-				<div class="display-grid grid-justify--around">
-					<input id="sendButton" class="form-input form-input--rounded form-send" type="submit" value="Войти">
-				</div>
-			</form>
+<div class="container display-grid align-content--center">
+	<div class="page-title" style="text-align: center; display: block">Авторизация</div>
+	<form id="AuthForm" class="form form--bordered">
+		<div class="form-block">
+			<label for="inputLogin">Логин</label>
+			<input class="form-input" name="user-name" type="text" id="inputLogin" placeholder="Логин">
 		</div>
-    </div>
+
+		<div class="form-block">
+			<label for="inputPassword">Пароль</label>
+			<input class="form-input" name="user-pass" type="password" id="inputPassword" value="test" placeholder="Пароль">
+		</div>
+
+		<small class="error-messages" style="margin-top: 10px; font-weight: 700; color: #c42626; font-size: 13px"></small>
+
+		<div class="display-grid">
+			<input id="sendButton" class="form-input form-input--rounded form-send" type="submit" value="Войти">
+		</div>
+	</form>
 </div>
 
 <script>
