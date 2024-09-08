@@ -8,12 +8,6 @@ try
 {
     session_start();
     Application::Instance()->init();
-    $currentUser = new \App\Modules\System\Classes\User();
-
-    if (Application::Instance()->request->session->has('login-user'))
-    {
-        $currentUser->loadByLogin(Application::Instance()->request->session->get('login-user'));
-    }
 
     // ----------------------------------------------------------------------
     // ------------------- ШАБЛОН И ПРАВА ДОСТУПА ---------------------------
@@ -29,7 +23,7 @@ try
     if ($routeInfo)
     {
         $templateName = $routeInfo['template'];
-        if ($currentUser->getRightsLevel() < $routeInfo['rights_level'])
+        if (Application::Instance()->currentUser->getRightsLevel() < $routeInfo['rights_level'])
         {
             header('Location:/admin/auth/');
         }
