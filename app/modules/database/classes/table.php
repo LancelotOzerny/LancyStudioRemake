@@ -40,9 +40,10 @@ abstract class Table
             $tableName = $params['join']['table']::getTableName();
             foreach ($params['join']['on'] as $key => $value)
             {
+                $isArray = is_array($value);
                 $left = $key;
-                $operand = $value[0] ?? '=';
-                $right = $value[1] ?? $value;
+                $operand = $isArray ? $value[0] : '=';
+                $right = $isArray ? $value[1] : $value;
                 $join = ($params['join']['type'] ?? 'INNER') . " JOIN $tableName ON $left $operand $tableName.$right" ;
             }
         }
