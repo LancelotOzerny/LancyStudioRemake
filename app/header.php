@@ -15,7 +15,26 @@ try
         $currentUser->loadByLogin(Application::Instance()->request->session->get('login-user'));
     }
 
-    Template::Instance()->load(Application::Instance()->getUri());
+    // ----------------------------------------------------------------------
+    // ------------------- ШАБЛОН И ПРАВА ДОСТУПА ---------------------------
+    // ----------------------------------------------------------------------
+    $routeInfo = \Develop\Classes\Database\Tables\RoutesTable::select([
+        'select' => [ 'route', 'template', 'rights_level'],
+        'where' => [
+            'route' => Application::Instance()->getUri()
+        ]
+    ])[0] ?? null;
+
+    $templateName = 'default';
+    if ($routeInfo)
+    {
+        $templateName = $routeInfo['template'];
+        if ($currentUser->getRightsLevel() < $routeInfo['rights_level'])
+        {
+            header('Location:/admin/auth/');
+        }
+    }
+    Template::Instance()->load($templateName);
     $templatePath = Template::Instance()->templatePath;
 }
 catch (Throwable $error)
