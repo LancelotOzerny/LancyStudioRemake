@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="<?= $this->templatePath ?>/assets/style.css">
 </head>
 <body>
+<?php if(\App\Modules\System\Classes\Application::Instance()->currentUser->getRightsLevel() >= 100): ?>
 <div class="side-navigation">
 	<div class="side-navigation-content">
 		<ul class="side-navigation-navbar">
@@ -31,5 +32,4 @@
 		<span class="side-navigation-toggler">&#9668;</span>
 	</div>
 </div>
-
-<div style="padding-left: 50px">
+<?php endif; ?>
