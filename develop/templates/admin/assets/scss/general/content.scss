@@ -12,6 +12,7 @@
 {
   display: grid;
 }
+
 .align-content--center
 {
   align-content: center;
@@ -19,4 +20,18 @@
 
 .error-messages
 {
+}
+
+.page-title
+{
+  display: block;
+  &--center
+  {
+    text-align: center;
+  }
+
+  &--padding-25
+  {
+    padding: 25px 0;
+  }
 }
