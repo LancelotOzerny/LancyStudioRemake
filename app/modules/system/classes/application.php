@@ -8,6 +8,8 @@ class Application
 {
     use Singleton;
 
+    public bool $isLogMode = false;
+
     private string $current_uri = '';
     private array $params = [];
     public Request | null $request = null;

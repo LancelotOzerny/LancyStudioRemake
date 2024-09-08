@@ -1,6 +1,8 @@
 <?php
 namespace App\Modules\Database\Classes;
 
+use App\Modules\System\Classes\Application;
+
 abstract class Table
 {
     protected static string $tableName = '';
@@ -49,6 +51,15 @@ abstract class Table
         }
 
         $sql = "$select FROM " . static::$tableName . " $join $where";
+
+
+        if (Application::Instance()->isLogMode)
+        {
+            $file = $_SERVER['DOCUMENT_ROOT'] . '/logs/sql/_sql__' . date("Y-m-d") . '.log';
+            $data = date("[H:i:s]") . PHP_EOL . $sql . PHP_EOL . PHP_EOL;
+            file_put_contents($file, $data, FILE_APPEND);
+        }
+
         if ($params['order'])
         {
             $order = 'ORDER BY `' . $params['order']['by'] . '` ' . $params['order']['direction'] ?? 'ASC';
