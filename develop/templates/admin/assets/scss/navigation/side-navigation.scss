@@ -1,0 +1,69 @@
+.side-navigation
+{
+  height: 100vh;
+  display: inline-grid;
+  grid-template-columns: auto 40px;
+  background-color: #D3D1D6;
+
+  left: 0;
+  z-index: 100;
+  position: fixed;
+  transition: 1s;
+
+  transform: translateX(calc(40px - 100%));
+
+  &-content
+  {
+    padding: 25px 30px;
+  }
+
+  &-toggle-area
+  {
+    height: 100%;
+    width : 100%;
+    background-color: #eee;
+    box-shadow: 0 0 2px #222;
+    color: #222;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+
+  &-toggler
+  {
+    transform: scaleY(2) rotateZ(0);
+    transition: 1s;
+
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+  }
+
+  &-navbar
+  {
+    &~&
+    {
+      padding: 50px 0 0;
+    }
+  }
+
+  &-navbar-title
+  {
+    color: #563224;
+	font-weight: 600;
+	text-transform: uppercase;
+  }
+
+  &-item
+  {
+    margin-top: 10px;
+  }
+
+  &-link
+  {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+}
