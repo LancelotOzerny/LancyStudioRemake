@@ -24,14 +24,11 @@
 
 .page-title
 {
+  padding-bottom: 50px;
   display: block;
+
   &--center
   {
     text-align: center;
-  }
-
-  &--padding-25
-  {
-    padding: 25px 0;
   }
 }
