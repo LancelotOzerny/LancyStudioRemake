@@ -24,9 +24,13 @@
                     <a class="h-navbar-link" href="/">Главная</a>
                 </li>
 
-                <li class="h-navbar-item anim anim-hover--text-blue-bordered">
-                    <a class="h-navbar-link" href="/portfolio/">Портфолио</a>
-                </li>
+				<li class="h-navbar-item anim anim-hover--text-blue-bordered">
+					<a class="h-navbar-link" href="/portfolio/">Портфолио</a>
+				</li>
+
+				<li class="h-navbar-item anim anim-hover--text-blue-bordered">
+					<a class="h-navbar-link" href="/certificates/">Сертификаты</a>
+				</li>
             </ul>
 
             <hr class="main-navigation-separator">

@@ -33,8 +33,13 @@
 					<li class="a-navbar-item">
 						<a class="a-navbar-link" href="/">Главная</a>
 					</li>
+
 					<li class="a-navbar-item">
 						<a class="a-navbar-link" href="/portfolio/">Портфолио</a>
+					</li>
+
+					<li class="a-navbar-item">
+						<a class="a-navbar-link" href="/certificates/">Сертификаты</a>
 					</li>
 				</ul>
 			</div>
