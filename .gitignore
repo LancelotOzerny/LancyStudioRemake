@@ -1,6 +1,7 @@
 .idea/
 vendor/
 src/
+/files
 
 *.css
 *.css.map
