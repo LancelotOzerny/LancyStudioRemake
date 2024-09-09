@@ -8,15 +8,11 @@
   &-wrapper
   {
 	box-shadow: 0 0 5px #000;
-	& ~ &
-	{
-	  margin-top: 20px;
-	}
-
-	&:last-child
-	{
-	  margin-bottom: 50px;
-	}
+	margin-bottom: 20px;
+  }
+  &-wrapper:last-child
+  {
+	margin-bottom: 50px;
   }
 
   &-side
@@ -93,6 +89,14 @@
 
 @media screen and (min-width: 720px)
 {
+	.certificate-wrapper
+	{
+	  margin-bottom: 30px;
+	  &:last-child
+	  {
+		margin-bottom : 50px;
+	  }
+	}
 	.certificate-param-title
 	{
 	  display: inline;
@@ -155,6 +159,14 @@
 
 @media screen and (min-width: 1000px)
 {
+  .certificate-wrapper
+  {
+	margin-bottom: 50px;
+	&:last-child
+	{
+	  margin-bottom : 100px;
+	}
+  }
   .certificate-large--1000
   {
 	@include large-certificate;
