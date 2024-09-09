@@ -2,6 +2,20 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/header.php';
 /** @var string $templatePath */
 
+use Develop\Classes\Database\Tables\UsersTable;
+
+$userList = UsersTable::select([
+	'select' => [
+		'Users.id', 'login', 'Users.date', 'Rights.name as rights'
+	],
+	'join' => [
+		'table' => 'Develop\Classes\Database\Tables\RightsTable',
+		'on' => [
+			'rights_id' => 'id'
+		]
+	]
+]);
+
 \App\Modules\System\Classes\Template::Instance()->includeHeader();
 ?>
 <div class="container" style="padding-left: 40px">
@@ -17,28 +31,25 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/app/header.php';
 					<th>id</th>
 					<th>Логин</th>
 					<th>Создан</th>
-					<th>Уровень прав</th>
+					<th>Права</th>
+					<th></th>
 				</tr>
 				</thead>
 				<tbody class="table-body">
-				<tr>
-					<td>0</td>
-					<td>Логин</td>
-					<td>Создан</td>
-					<td>Уровень прав</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>Логин</td>
-					<td>Создан</td>
-					<td>Уровень прав</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>Логин</td>
-					<td>Создан</td>
-					<td>Уровень прав</td>
-				</tr>
+				<?php foreach ($userList as $user): ?>
+					<tr>
+						<td><?= $user['id'] ?></td>
+						<td><?= $user['login'] ?></td>
+						<td><?= $user['date'] ?></td>
+						<td><?= $user['rights'] ?></td>
+						<td>
+							<div class="btn-group horizontal">
+								<button class="btn btn-medium btn-squire btn-edit btn--info"></button>
+								<button class="btn btn-medium btn-squire btn-close btn--danger"></button>
+							</div>
+						</td>
+					</tr>
+				<?php endforeach; ?>
 				</tbody>
 			</table>
 		</div>
