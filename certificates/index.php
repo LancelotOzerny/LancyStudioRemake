@@ -47,9 +47,11 @@ Template::Instance()->includeHeader();
 				</div>
 				<div class="certificate-side certificate-side--right">
 					<img class="certificate-image" src="/files/images/certificates/volsu.png"/>
+					<!--
 					<div class="button-wrapper">
 						<a href="#" class="download-button disabled">Скачать (PDF)</a>
 					</div>
+					-->
 				</div>
 			</div>
 		</div>
