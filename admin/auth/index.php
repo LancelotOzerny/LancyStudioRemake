@@ -64,7 +64,7 @@ if (Application::Instance()->request->post->has('userLogin'))
 
 		<div class="form-block">
 			<label for="inputPassword">Пароль</label>
-			<input class="form-input" name="user-pass" type="password" id="inputPassword" value="test" placeholder="Пароль">
+			<input class="form-input" name="user-pass" type="password" id="inputPassword" placeholder="Пароль">
 		</div>
 
 		<small class="error-messages" style="margin-top: 10px; font-weight: 700; color: #c42626; font-size: 13px"></small>
