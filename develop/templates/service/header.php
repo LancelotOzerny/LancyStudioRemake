@@ -1,3 +1,7 @@
+<?php
+    /** @var Template $this*/
+?>
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -11,5 +15,6 @@
     <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="<?= $this->templatePath ?>/assets/style.css">
 </head>
 <body>
