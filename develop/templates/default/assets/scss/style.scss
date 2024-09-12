@@ -1,20 +1,20 @@
 @import "../../../general/assets/scss/general/reset";
 
-@import "general/varriables";
+@import "../../../general/assets/scss/general/varriables";
 @import "general/modificators";
 @import "../../../general/assets/scss/general/text";
 @import "general/grid";
 
 @import "../../../general/assets/scss/fonts/inter";
 
-@import "animations/keyframes";
-@import "animations/hover-animations";
+@import "../../../general/assets/scss/animations/keyframes";
+@import "../../../general/assets/scss/animations/hover-animations";
 
 @import "../../../general/assets/scss/general/buttons";
 @import "components/a-navbar";
 @import "components/h-navbar";
 @import "components/text-block";
-@import "components/project";
+@import "../../../general/assets/scss/components/project";
 @import "components/carousel";
 @import "components/certificate";
 
@@ -23,5 +23,5 @@
 @import "page-blocks/main-navigation";
 @import "page-blocks/main-preview";
 @import "page-blocks/about-me";
-@import "page-blocks/portfolio";
+@import "../../../general/assets/scss/page-blocks/portfolio";
 @import "page-blocks/main-footer";
