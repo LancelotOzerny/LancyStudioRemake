@@ -17,6 +17,48 @@ Template::Instance()->includeHeader();
 		<div class="container">
 			<div class="certificate certificate-large--1440">
 				<div class="certificate-side certificate-side--left">
+					<div class="certificate-title page-title" style="color: #FF726B">Контент менеджер 1C Bitrix</div>
+					<div class="certificate-description">
+						<p class="certificate-param">“Контент менеджер”</p>
+						<p class="certificate-param"><span class="certificate-param-title">Дата выдачи:</span> 01.10.2024</p>
+						<p class="certificate-param"><span class="certificate-param-title">Регистрационный номер:</span> LRN-561662-34-768-6925848</p>
+					</div>
+				</div>
+				<div class="certificate-side certificate-side--right">
+					<img class="certificate-image" src="/files/images/certificates/1c-bitrix.png"/>
+					<div class="button-wrapper">
+						<a href="/files/pdf/certificates/content-manager-1.pdf" download class="download-button">Скачать (PDF)</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="certificate-wrapper" style="background-color: #F7B35F;">
+		<div class="container">
+			<div class="certificate certificate-large--1440">
+				<div class="certificate-side certificate-side--left">
+					<div class="certificate-title page-title" style="color: #FF726B">"Администратор. Базовый" - 1C Bitrix</div>
+					<div class="certificate-description">
+						<p class="certificate-param">“Администратор. Базовый”</p>
+						<p class="certificate-param"><span class="certificate-param-title">Дата выдачи:</span> 17.07.2023</p>
+						<p class="certificate-param"><span class="certificate-param-title">Регистрационный номер:</span> LRN-480412-35-762-6925848</p>
+					</div>
+				</div>
+				<div class="certificate-side certificate-side--right">
+					<img class="certificate-image" src="/files/images/certificates/1c-bitrix.png"/>
+					<div class="button-wrapper">
+						<a href="/files/pdf/certificates/admin_base.pdf" download class="download-button">Скачать (PDF)</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="certificate-wrapper" style="background-color: #F7B35F;">
+		<div class="container">
+			<div class="certificate certificate-large--1440">
+				<div class="certificate-side certificate-side--left">
 					<div class="certificate-title page-title" style="color: #FF726B">Разработчик Bitrix Framework</div>
 					<div class="certificate-description">
 						<p class="certificate-param">“Интеграция дизайна и настройка платформы”</p>
@@ -41,7 +83,7 @@ Template::Instance()->includeHeader();
 					<div class="certificate-title page-title" style="color: #98C2FF">Диплом бакалавра</div>
 					<div class="certificate-description">
 						<p class="certificate-param">09.03.02 Информационные системы и технологии</p>
-						<p class="certificate-param"><span class="certificate-param-title">Дата выдачи:</span> 05.05.2024</p>
+						<p class="certificate-param"><span class="certificate-param-title">Дата выдачи:</span> 05.07.2024</p>
 						<p class="certificate-param"><span class="certificate-param-title">Профиль:</span> Разработка информационных систем</p>
 					</div>
 				</div>
